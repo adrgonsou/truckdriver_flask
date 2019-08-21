@@ -53,7 +53,7 @@ docker-compose up
 <img src="print3.png" align="center"/>
 
 ### Debugger Docker
-Para utilizar o pdb ou algum debug subir a aplicação da seguinte forma:
+Para utilizar o *import pdb; pdb.set_trace()* ou algum debug, suba a aplicação da seguinte forma:
 ```
 docker-compose run --service-ports flask python ./application/app.py shell
 ```
