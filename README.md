@@ -50,16 +50,13 @@ Na pasta da aplicação executar os comandos:
 docker-compose build
 docker-compose up
 ```
+<img src="print3.png" align="center"/>
 
-### Utilizando Docker
-Na na pasta do aplicaçao executar os comandos:
-(*repositório do [Docker Hub]*)
+### Debugger Docker
+Para utilizar o pdb ou algum debug subir a aplicação da seguinte forma:
 ```
-docker build -t "adgonsou/truckpad:latest" . 
-docker push adgonsou/truckpad:latest
-docker run -p 5000:5000 adgonsou/truckpad:latest
+docker-compose run --service-ports flask python ./application/app.py shell
 ```
-
 **Teste se a aplicação subiu com curl ou browser:**
 * curl -v "http://localhost:5000/"
 * Ou acessando o link no navegador http://localhost:5000
