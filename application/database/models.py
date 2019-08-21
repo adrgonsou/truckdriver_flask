@@ -34,3 +34,13 @@ class Trucker(db.Model):
 
     def __repr__(self):
         return '<Trucker %r>' % self.name, self.name, self.gender, self.cnh, self.truckload, self.owner_truck, self.truck_type, self.origin, self.destiny, self.created_at 
+
+class TruckType(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50))
+
+    def __init__(self, name):
+        self.name = name
+
+    def __repr__(self):
+        return '<TruckType %r>' % self.name 
